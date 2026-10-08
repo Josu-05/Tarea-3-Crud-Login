@@ -1,69 +1,123 @@
-# CodeIgniter 4 Application Starter
+CRUD de Películas con Login MVC
+Descripción del proyecto:
 
-## What is CodeIgniter?
+Este proyecto fue desarrollado como parte de la asignatura de Ingeniería Web. Consiste en una aplicación web creada con CodeIgniter 4 utilizando el patrón de arquitectura MVC (Modelo, Vista y Controlador).
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+El sistema permite gestionar un catálogo de películas mediante las operaciones CRUD (Crear, Leer, Actualizar y Eliminar), además de implementar un sistema de autenticación que restringe el acceso a las funcionalidades principales.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Estado del proyecto:
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+El proyecto se encuentra completamente funcional y cumple con todos los requisitos solicitados:
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+CRUD de películas implementado.
+Sistema de Login implementado.
+Protección de rutas privadas.
+Cierre de sesión (Logout).
+Contraseña validada mediante MD5.
+Interfaz gráfica personalizada con HTML y CSS.
+Aplicación desarrollada bajo el patrón MVC.
+Funcionalidades:
+Sistema de autenticación
 
-## Installation & updates
+El usuario debe iniciar sesión para acceder a la aplicación.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Características:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+Inicio de sesión mediante usuario y contraseña.
+Manejo de sesiones.
+Cierre de sesión seguro.
+Redirección automática al Login cuando no existe una sesión activa.
+Gestión de películas
 
-## Setup
+El sistema permite:
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Agregar nuevas películas.
+Visualizar el listado de películas registradas.
+Editar información existente.
+Eliminar películas.
+Seguridad
 
-## Important Change with index.php
+Las rutas del CRUD están protegidas, por lo que no es posible acceder directamente a ellas sin autenticarse previamente.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Además, la contraseña es validada mediante un hash MD5.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Demostración del sistema
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Usuario de prueba:
 
-## Repository Management
+Usuario: admin
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Contraseña: 123456
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Durante la ejecución se pueden demostrar las siguientes funcionalidades:
 
-## Server Requirements
+✅ Inicio de sesión
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+✅ Acceso al CRUD
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+✅ Crear película
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+✅ Editar película
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+✅ Eliminar película
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+✅ Cerrar sesión
+
+✅ Restricción de acceso a rutas protegidas
+
+Instalación y ejecución:
+Clonar el repositorio del proyecto.
+Abrir una terminal dentro de la carpeta del proyecto.
+Instalar dependencias con Composer.
+Ejecutar el servidor local de CodeIgniter.
+Abrir el navegador y acceder a:
+
+http://localhost:8080
+
+Tecnologías utilizadas:
+
+Durante el desarrollo se utilizaron las siguientes tecnologías:
+
+PHP
+CodeIgniter 4
+HTML5
+CSS3
+Git
+GitHub
+MD5
+Arquitectura utilizada:
+
+El proyecto fue desarrollado siguiendo el patrón MVC (Modelo - Vista - Controlador).
+
+Modelo (Model)
+
+Encargado de gestionar los datos y la lógica relacionada con la información.
+
+Vista (View)
+
+Responsable de mostrar la interfaz gráfica al usuario.
+
+Controlador (Controller)
+
+Actúa como intermediario entre las vistas y la lógica de negocio.
+
+Seguridad implementada:
+
+La aplicación incorpora los siguientes mecanismos de seguridad:
+
+Autenticación mediante sesión.
+Protección de rutas privadas.
+Redirección automática al Login.
+Funcionalidad de Logout.
+Validación de contraseña con MD5.
+Autor:
+
+Josué Martín Villalva Freire
+
+Estudiante de Ingeniería de Software.
+
+GitHub: https://github.com/Josu-05
+
+Licencia:
+
+Proyecto desarrollado con fines exclusivamente académicos para la asignatura de Ingeniería Web.
